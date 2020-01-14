@@ -21,12 +21,17 @@ func main() {
 	monthArr = monthArr[:num]
 	var targetMonth string
 	fmt.Scanln(&targetMonth)
-	var index int
+	var index int = -1
 	for p := num - 1; p >= 0; p-- {
 		if monthArr[p] == targetMonth {
 			index = p
 			break
 		}
 	}
-	fmt.Println(heightArr[index])
+
+	if index == -1 {
+		fmt.Println(index)
+	} else {
+		fmt.Println(heightArr[index])
+	}
 }
